@@ -9,6 +9,10 @@ import { UserList } from "./user/UserList";
 import { UserCreate } from "./user/UserCreate";
 import { UserEdit } from "./user/UserEdit";
 import { UserShow } from "./user/UserShow";
+import { PromptList } from "./prompt/PromptList";
+import { PromptCreate } from "./prompt/PromptCreate";
+import { PromptEdit } from "./prompt/PromptEdit";
+import { PromptShow } from "./prompt/PromptShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -41,6 +45,13 @@ const App = (): React.ReactElement => {
           edit={UserEdit}
           create={UserCreate}
           show={UserShow}
+        />
+        <Resource
+          name="Prompt"
+          list={PromptList}
+          edit={PromptEdit}
+          create={PromptCreate}
+          show={PromptShow}
         />
       </Admin>
     </div>
